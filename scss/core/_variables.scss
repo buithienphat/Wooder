@@ -1,0 +1,79 @@
+:root {
+  // gap, maxwidth of page, container-fluid, container
+  --gap: 28px;
+
+  --pd-l-r: 28px;
+  --max-width-page: 2560px;
+  --max-width-container-fluid: 1920px;
+  --max-width-container: calc(1196px + calc(var(--gap) * 2));
+
+  // color
+  --main-cl: #bea67c;
+  --white-cl: #fff;
+  --black-cl: #000;
+  --gray-cl: #464646;
+
+  // fontsize - lineheight
+  --fs-h1: 8.4rem;
+  --lh-h1: normal;
+
+  --fs-h2: 4.6rem;
+  --lh-h2: 5.6rem;
+  --fs-h3: 1.8rem;
+  --lh-h3: 2.4rem;
+  --fs-body: 1.8rem;
+  --lh-body: 2.5rem;
+  --fs-button: 1.5rem;
+  --lh-button: normal;
+  --fs-body-small: 1.4rem;
+  --lh-body-small: normal;
+
+  // General Variable Demo
+  --height-header: 90px;
+  --pd-section: 120px;
+  --height-btn: 44px;
+  --height-btn-next: 34.46px;
+
+  // time transition
+  --duration: 0.4s;
+  --cubic: cubibc-bezier(0.59, 0.29, 0.15, 0.93); // gia tốc chuyển động
+
+  // Reponesive
+
+  @include md {
+    --container-max-width: 1140px;
+  }
+
+  //  < 992px
+  @include sm {
+    --max-width-container: 960px; // tùy yêu cầu
+    --pd-section: 90px;
+  }
+  // < 768px
+  @include xs {
+    --gap: 10px;
+    --max-width-container: 100%; // tùy yêu cầu
+    --fs-h1: 5.6rem;
+
+    --fs-h2: 3.8rem;
+    --lh-h2: 4.2rem;
+
+    --fs-h3: 1.6rem;
+    --lh-h3: 2.2rem;
+
+    --fs-body: 1.5rem;
+    --lh-body: 2rem;
+
+    --fs-button: 1.2rem;
+    --fs-body-small: 1.2rem;
+
+    --height-header: 64px;
+    --height-btn: 34px;
+
+    --pd-section: 60px;
+  }
+
+  @include xxs {
+    --max-width-container: 100%;
+  }
+}

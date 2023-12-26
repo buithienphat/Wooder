@@ -1,0 +1,16 @@
+// setup first
+@import "core/reset";
+@import "core/mixins";
+@import "core/variables";
+
+// layout + componenent
+@import "core/layouts";
+@import "core/components";
+@import "core/libs";
+
+@import "core/header";
+@import "core/nav"; // nav for moblie
+@import "core/footer";
+
+// pages
+@import "pages/home";

@@ -1,0 +1,36 @@
+.nav-m {
+  max-width: 100%;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--black-cl);
+  text-transform: uppercase;
+  position: fixed;
+  z-index: 2;
+  font-size: 22px;
+  letter-spacing: 1.76px;
+  font-family: pnb;
+  opacity: 0;
+  visibility: hidden;
+  @include transition(var(--duration) opacity);
+  .container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  li {
+    display: flex;
+    justify-content: center;
+    a {
+      color: var(--white-cl);
+      padding: 15px;
+      &.--active {
+        color: var(--main-cl);
+      }
+    }
+  }
+  &.--active {
+    opacity: 1;
+    visibility: visible;
+  }
+}

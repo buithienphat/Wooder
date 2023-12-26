@@ -1,0 +1,58 @@
+html {
+  font-size: 62.5%;
+  body {
+    font-family: pnr;
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    max-width: var(--max-width-page);
+    width: 100%;
+    margin: auto;
+    position: relative;
+    letter-spacing: 0.36px;
+    color: var(--gray-cl);
+    &.--disable-scroll {
+      height: 100vh;
+      overflow: hidden;
+    }
+    .containerfluid {
+      width: 100%;
+      max-width: var(--max-width-container-fluid);
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: var(--gap);
+      padding-right: var(--gap);
+    }
+    .container {
+      width: 100%;
+      max-width: var(--max-width-container);
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: var(--gap);
+      padding-right: var(--gap);
+    }
+    .main {
+      position: relative;
+      section {
+        &.--center {
+          padding-top: var(--pd-section);
+          padding-bottom: var(--pd-section);
+        }
+        &.--bgblack {
+          background-color: var(--black-cl);
+        }
+        &.--bottom {
+          padding-bottom: var(--pd-section);
+        }
+      }
+    }
+    @include xs {
+      .container,
+      .containerfluid {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+  }
+}
